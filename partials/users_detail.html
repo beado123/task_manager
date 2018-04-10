@@ -1,0 +1,42 @@
+<br><br>
+<div class="row">
+
+	<div class="small-8 columns end">
+		<div class="row">
+			<div class="small-12 column">
+				<span id="setting_subtitle1">User Profile</span>
+				<span id="setting_subtitle2">just like on Facebook but better</span>
+			</div>
+		</div>
+		<div class="row topBorder">
+			<div class="small-6 columns user_detail">{{user.name}}</div>
+			<div class="small-6 columns end user_detail">{{user.email}}</div>
+		</div>
+		<div class="row topBorder">
+			<div id="pendingTasks" class="small-12 columns">Pending Tasks</div>
+		</div>
+
+		<div class="row topBorder" ng-repeat="task in tasks.data">
+			<div class="small-4 columns username" ng-click="gotoDetail(task)"><strong>{{task.name}}</strong></div>
+			<div class="small-3 columns deadline">{{task.deadline}}</div>
+			<div class="small-2 columns">
+				<button id="complete_button" class="small-push-2 end button default" ng-click="toComplete(task)">Completed</button>
+			</div>
+		</div>
+		<div class="row">
+			<button id="show_complete_button" class="small-push-4 end button default" ng-click="showComplete()">Show Completed Tasks</button>
+		</div>
+		<div class="row topBorder addHeight" ng-repeat="task1 in complete_tasks.data" ng-show="showCompleted">
+			<div id="username_completed" class="small-4 columns" ng-click="gotoDetail(task1)"><strong>{{task1.name}}</strong></div>
+			<div id="deadline_completed" class="small-4 columns end">{{task1.deadline}}</div>
+		</div>
+
+	</div>
+
+	<div class="small-4 columns">
+		<a href="#/users" class="small-8 columns small-push-1 end button default button_group">Users</a><br><br>
+		<a href="#/tasks" class="small-8 columns small-push-1 end button default button_group">Tasks</a>
+		<a href="#/settings" class="small-8 columns small-push-1 end button default button_group">Settings</a>
+
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<br><br>
+<div class="row">
+
+	<div class="small-8 columns end list">
+		<div class="row">
+			<div class="small-12 column">
+				<span id="setting_subtitle1">Users</span>
+				<span id="setting_subtitle2">a list of cool people</span>
+	      <button id="add_user_button" class="small-push-7 end button default" ng-click="addUser()">Add User</button><br>
+			</div>
+		</div>
+		<div class="row topBorder" ng-repeat="user in users.data">
+			<div  ng-click="displayDetail(user)" class="small-3 columns deadline username"><strong>{{user.name}}</strong></div>
+			<div class="small-3 columns deadline">{{user.email}}</div>
+			<div class="small-2 columns">
+				<button id="delete_button" class="small-push-2 end button default" ng-click="deleteUser(user)">Delete</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="small-4 columns">
+		<a href="#/users" class="small-8 columns small-push-1 end button default button_group">Users</a><br><br>
+		<a href="#/tasks" class="small-8 columns small-push-1 end button default button_group">Tasks</a>
+		<a href="#/settings" class="small-8 columns small-push-1 end button default button_group">Settings</a>
+
+	</div>
+</div>
+<div class="row topBorder"></div>

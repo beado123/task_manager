@@ -1,0 +1,65 @@
+<br><br>
+<div class="row">
+
+	<div class="small-8 columns end list">
+		<div class="small-12 column">
+			<span id="setting_subtitle1">Edit Task</span>
+			<span id="setting_subtitle2">staying occupied</span>
+		</div>
+
+    <div class="row">
+
+      <div class= "small-8 columns">
+        <div>Name<span class="asterik">*</span></div>
+        <form name="form1">
+    		    <input type="search" name="search" placeholder="name" ng-init="taskname=name1" ng-model="taskname" required>
+        </form>
+      <div ng-show=" submitted && form1.search.$error.required" class="reminder">Name is required</div>
+
+<br>
+        <div>Description</div>
+        <form name="form2">
+            <input type="search" name="search" placeholder="description" ng-model="description">
+        </form>
+<br>
+<div ng-show="(submitted)  && form3.deadline_date.$error.required" class="reminder">Deadline is required</div>
+      <div>Deadline<span class="asterik">*</span></div>
+      <form name="form3">
+        <datepicker>
+            <input ng-model="date" name="deadline_date" type="text" required>
+        </datepicker>
+      </form>
+
+
+
+<br><br>
+      <div class="row filling" ng-show="false">ss
+
+      </div>
+      <div>Assigned User</div>
+      <select ng-model="selectedUser"  ng-options="option for option in options"></select>
+<br><br>
+      <span class="">Completed:
+        <form >
+          <input type="radio" ng-value=true ng-model="complete_change" > Yes</input>
+          <input type="radio" ng-value=false ng-model="complete_change" ng-init="complete_change = completed" > No</input>
+        </form>
+      </span>
+
+      <button id="submit_button" class="small-push-5 end button default" ng-click="editTask()">Submit</button>
+<br><br>
+      <div ng-show="submitSuccess" class="suc_msg"> <div class="inner_suc_msg">Task {{taskname}} has been edited!</div></div>
+      <div ng-show="error" class="err_msg">  <div class="inner_err_msg">{{err_msg}}</div></div>
+    </div>
+    </div>
+  </div>
+
+	<div class="small-4 columns">
+		<a href="#/users" class="small-8 columns small-push-1 end button default button_group">Users</a><br><br>
+		<a href="#/tasks" class="small-8 columns small-push-1 end button default button_group">Tasks</a>
+		<a href="#/settings" class="small-8 columns small-push-1 end button default button_group">Settings</a>
+
+	</div>
+</div>
+<br><br><br><br>
+<div class="row ending"></div>

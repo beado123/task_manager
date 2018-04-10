@@ -1,0 +1,30 @@
+<br><br>
+<div class="row ">
+
+	<div class="small-8 columns end list">
+		<div class="small-12 column">
+			<span id="setting_subtitle1">Settings</span>
+			<span id="setting_subtitle2">set your backend URL</span>
+		</div>
+		<form>
+
+      <div class="small-12 columns">
+        <input ng-model="url" type="text" placeholder="URL">
+      </div>
+
+	    <div class="text-center">
+	      <button ng-click="setUrl()" id="url_botton" class="button tiny info">Set URL</button>
+	    </div>
+
+	    {{displayText}}
+
+	  </form>
+	</div>
+
+	<div class="small-4 columns">
+		<a href="#/users" class="small-8 columns small-push-1 end button default button_group">Users</a><br><br>
+		<a href="#/tasks" class="small-8 columns small-push-1 end button default button_group">Tasks</a>
+		<a href="#/settings" class="small-8 columns small-push-1 end button default button_group">Settings</a>
+
+	</div>
+</div>
