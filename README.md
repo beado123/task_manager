@@ -10,7 +10,7 @@ User Schema:
 3. "pendingTasks" - [String] - The \_id fields of the *pending* tasks that this user has
 4. "dateCreated" - Date - should be set automatically by server
 
-## Tasks
+## Task
 Can create a new task, update a task, or delete a task.
 
 Renders a task list of pending tasks or completed tasks.
